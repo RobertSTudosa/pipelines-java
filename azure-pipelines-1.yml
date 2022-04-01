@@ -50,6 +50,13 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         command: 'login'
         Dockerfile: '**/Dockerfile'
+    - task: CmdLine@2
+      displayName: Common cmd task for observation purposes
+      inputs:
+        script: |
+          echo Write your commands here
+            
+          echo Hello world
 
 
 - stage: Deploy
