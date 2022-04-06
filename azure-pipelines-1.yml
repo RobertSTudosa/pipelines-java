@@ -50,6 +50,7 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         command: 'login'
         Dockerfile: '**/Dockerfile'
+        
     - task: CmdLine@2
       displayName: Common cmd task for observation purposes
       inputs:
