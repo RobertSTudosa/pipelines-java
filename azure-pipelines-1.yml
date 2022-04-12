@@ -20,6 +20,9 @@ variables:
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
+  #debug context decorator
+  system.debugContext: 'true'
+
 stages:
 - stage: Build
   displayName: Build stage
