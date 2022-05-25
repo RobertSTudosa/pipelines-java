@@ -61,4 +61,13 @@ stages:
           echo Write your commands here
             
           echo Hello world
+    - task: VSTest@2
+      inputs:
+        testSelector: 'testAssemblies'
+        testAssemblyVer2: |
+          **\*test*.dll
+          !**\*TestAdapter.dll
+          !**\obj\**
+        searchFolder: '$(System.DefaultWorkingDirectory)'
+        codeCoverageEnabled: true
 
