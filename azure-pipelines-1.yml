@@ -70,4 +70,8 @@ stages:
           !**\obj\**
         searchFolder: '$(System.DefaultWorkingDirectory)'
         codeCoverageEnabled: true
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)'
+        publishLocation: 'pipeline'
 
